@@ -14,9 +14,26 @@ public class Elementos1801Application implements CommandLineRunner{
 
     @Override
     public void run(String... strings) throws Exception {
-      //  repoMensa.save(new Mensajito(7,"Segundo", "Mi primera vez con Hibernate"));
+        //repoMensa.save(new Mensajito("17 de octubre", "No tembló"));
        
-     Mensajito m= repoMensa.findOne(1);
-        System.out.println(m);
+        System.out.println("Vamos a buscar todos");
+        for( Mensajito mensa:repoMensa.findAll()){
+            System.out.println(mensa);
+        }
+        
+        System.out.println("Vamos a buscar por id");
+          System.out.println(repoMensa.findOne(1));
+          
+          
+          //Actualizar
+          repoMensa.save(new Mensajito(1,"nuevo titulo", "nuevo cuerpo"));
+          System.out.println(repoMensa.findOne(1));
+          
+          //Busqueda personalizada
+          for(Mensajito mensa:repoMensa.findByTitulo("nuevo titulo")){
+              System.out.println(mensa);
+          }
+          
+        
     }
 }
