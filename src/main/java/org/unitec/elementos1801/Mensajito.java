@@ -13,12 +13,12 @@ import javax.persistence.Id;
  *
  * @author T-107
  */
-@Entity
+@Entity  //anotacion para importar
 
 public class Mensajito {
     
-    @Id
-    @GeneratedValue
+    @Id //mapea el ID
+    @GeneratedValue  //autoincrementa PK
    
     
     private Integer id;

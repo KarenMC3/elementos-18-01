@@ -177,5 +177,6 @@ public class MiUI extends UI  {
          });
     }
     
-    
+    //capa model es diseño usando mvc, es la capa considerada el cerebro de nuestra aplicacion
+    //agregando dependencias
 }
